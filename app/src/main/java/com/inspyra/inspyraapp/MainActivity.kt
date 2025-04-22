@@ -21,9 +21,9 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.material.pullrefresh.PullRefreshIndicator
-import androidx.compose.material.pullrefresh.pullRefresh
-import androidx.compose.material.pullrefresh.rememberPullRefreshState
+import androidx.compose.material3.pullrefresh.PullRefreshIndicator
+import androidx.compose.material3.pullrefresh.pullRefresh
+import androidx.compose.material3.pullrefresh.rememberPullRefreshState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,7 +40,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 class MainActivity : ComponentActivity() {
-    @OptIn(ExperimentalMaterialApi::class)
+    @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,7 +57,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@OptIn(ExperimentalMaterialApi::class)
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
 fun SplashThenWeb(accion: String?) {
     var showSplash by remember { mutableStateOf(true) }
@@ -96,7 +96,7 @@ fun SplashScreen() {
     }
 }
 
-@OptIn(ExperimentalMaterialApi::class)
+@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun WebViewScreen(baseUrl: String, accion: String?) {
