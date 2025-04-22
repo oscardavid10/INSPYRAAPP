@@ -12,8 +12,8 @@ lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.8.0"
 composeBom = "2024.09.00"
 firebaseMessagingKtx = "24.1.1"
+compose-material = "1.7.8"
 compose = "1.5.4"
-pullrefresh = "1.2.0-alpha01"
 material = "1.12.0"
 volley = "1.2.1"
 media3CommonKtx = "1.6.1"
@@ -21,9 +21,7 @@ coroutines = "1.7.3"
 appcompat = "1.7.0" # última estable a abril 2025
 
 [libraries]
-material3-pullrefresh = { group = "androidx.compose.material3", name = "material3-pullrefresh", version = "1.2.0-alpha01" }
-androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.2.0-alpha01" }
-androidx-compose-pullrefresh = { group = "androidx.compose.material", name = "material-pullrefresh", version.ref = "pullrefresh" }
+androidx-compose-material = { module = "androidx.compose.material:material", version.ref = "compose-material" }
 androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
 androidx-material-pullrefresh = { group = "androidx.compose.material", name = "material-pullrefresh", version = "1.2.0-alpha03" }
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }

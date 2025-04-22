@@ -20,10 +20,9 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
-import androidx.compose.material3.pullrefresh.PullRefreshIndicator
-import androidx.compose.material3.pullrefresh.pullRefresh
-import androidx.compose.material3.pullrefresh.rememberPullRefreshState
+import androidx.compose.material.pullrefresh.PullRefreshIndicator
+import androidx.compose.material.pullrefresh.pullRefresh
+import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -96,7 +95,6 @@ fun SplashScreen() {
     }
 }
 
-@OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
 fun WebViewScreen(baseUrl: String, accion: String?) {
@@ -161,7 +159,7 @@ fun checkForUpdate(context: Context) {
 
             if (versionActual != ultima) {
                 (context as ComponentActivity).runOnUiThread {
-                    AlertDialog.Builder(context)
+                    androidx.appcompat.app.AlertDialog.Builder(context)
                         .setTitle("Actualización disponible")
                         .setMessage("Hay una nueva versión disponible. Por favor, actualiza la app.")
                         .setCancelable(false)

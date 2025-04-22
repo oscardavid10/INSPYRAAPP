@@ -70,6 +70,9 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.material)
+    implementation(libs.androidx.appcompat)
+
+
 
 
 
