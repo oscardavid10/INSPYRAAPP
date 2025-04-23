@@ -14,8 +14,8 @@ android {
         applicationId = "com.inspyra.inspyraapp"
         minSdk = 24
         targetSdk = 35
-        versionCode = 3
-        versionName = "1.2"
+        versionCode = 5
+        versionName = "1.4"
 
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -37,6 +37,8 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+        freeCompilerArgs += "-Xopt-in=androidx.compose.material.ExperimentalMaterialApi"
+        freeCompilerArgs += "-Xopt-in=androidx.compose.material.pullrefresh.ExperimentalMaterialApi"
     }
     buildFeatures {
         compose = true
@@ -67,11 +69,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.firebase.messaging)
     implementation(libs.volley)
+    implementation(libs.androidx.compose.material)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.androidx.material)
     implementation(libs.androidx.appcompat)
-
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.swiperefreshlayout)
 
 
 
